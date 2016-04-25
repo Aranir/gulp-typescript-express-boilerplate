@@ -35,11 +35,17 @@ gulp.task('testbuild', function () {
 });
 
 gulp.task('build', function() {
-	var tsResult = gulp.src('src/**/*.ts')
+	var tsResult = gulp.src('src/**/*.ts', {base: 'src'})
 	.pipe(sourcemaps.init())
 	.pipe(ts(ts.createProject('tsconfig.json')))
 	
-	return tsResult.js.pipe(sourcemaps.write()).pipe(gulp.dest('build/src'))
+	return tsResult.js
+	.pipe(sourcemaps.write('./', {
+		addComment: true, 
+		includeContent: false, 
+		sourceRoot: '../../src'
+	}))
+	.pipe(gulp.dest('build/src'))
 });
 
 function swallowError (error) {
