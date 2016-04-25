@@ -1,0 +1,41 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "prepublish": "tsc index.ts --module commonjs ",
+    "pretest": "tsc test/*Test.ts --module commonjs",
+    "test": "mocha",
+    "watch": "rerun-script"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "chai": "^3.5.0",
+    "connect-livereload": "^0.5.4",
+    "gulp": "^3.9.1",
+    "gulp-cli": "github:gulpjs/gulp-cli#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-express": "^0.3.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-mocha": "^2.2.0",
+    "gulp-node-inspector": "^0.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-spawn-mocha": "^2.2.2",
+    "gulp-typescript": "^2.13.0",
+    "gulp-util": "^3.0.7",
+    "merge2": "^1.0.2",
+    "rerun-script": "^0.6.0"
+  },
+  "watches": {
+    "pretest": [
+      "*.ts",
+      "test/**/*.ts"
+    ]
+  }
+}

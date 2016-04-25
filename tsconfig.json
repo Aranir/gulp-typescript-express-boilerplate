@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "sortOutput": true,
+    "target": "es5",
+    "declaration": false,
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noLib": false
+  },
+  "exclude": [
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
+  ]
+}
