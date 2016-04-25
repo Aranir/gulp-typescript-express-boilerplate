@@ -71,8 +71,6 @@ gulp.task('server', ['build'], function () {
 gulp.task('debug', function() {
 	return gulp.src('build/src/main.js', {read: false})
 	.pipe(shell(['node-debug <%= file.path %>']))
-    // .pipe(nodeInspector());
-
 })
 
 gulp.task('shorthand', shell.task([
